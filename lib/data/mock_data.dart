@@ -21,12 +21,12 @@ class MockData {
 
   // --- Mock Categories ---
   static List<Category> categories = [
-    Category(name: 'Food', icon: Icons.restaurant, isSelected: true), // Food is selected in the design
-    Category(name: 'Music', icon: Icons.music_note),
-    Category(name: 'Scenery', icon: Icons.landscape),
-    Category(name: 'Travel', icon: Icons.flight),
-    Category(name: 'Art', icon: Icons.palette),
-    Category(name: 'Fashion', icon: Icons.shopping_bag),
+    Category(name: 'Food', icon: Icons.restaurant_outlined, isSelected: true), // Food is selected in the design
+    Category(name: 'Music', icon: Icons.headphones_outlined),
+    Category(name: 'Scenery', icon: Icons.landscape_outlined),
+    Category(name: 'Travel', icon: Icons.flight_outlined),
+    Category(name: 'Art', icon: Icons.palette_outlined),
+    Category(name: 'Fashion', icon: Icons.shopping_bag_outlined),
   ];
 
   // --- Mock "Your Pins" Data ---

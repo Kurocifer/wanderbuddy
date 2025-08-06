@@ -52,7 +52,7 @@ class HomeHeaderSection extends StatelessWidget {
               ),
               // Notification Bell Icon
               Icon(
-                Icons.notifications_active,
+                Icons.notifications_active_outlined,
                 size: AppDimens.iconSizeMedium,
                 color: AppColors.primaryText,
               ),

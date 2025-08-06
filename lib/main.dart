@@ -1,24 +1,28 @@
+// lib/main.dart
+
 import 'package:flutter/material.dart';
+import 'package:wanderbuddy/widgets/common/bottom_nav_bar.dart';
+import 'package:wanderbuddy/widgets/home_specific/category_filter_section.dart';
 import 'package:wanderbuddy/widgets/home_specific/home_header_section.dart';
 
-// Placeholder for our home screen, will be defined later
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column( // Use a Column to stack the header and future content
+      body: Column(
         children: [
-          HomeHeaderSection(), // Our new header section
-          // Placeholder for other content that will go below the header
-          Expanded(
-            child: Center(
-              child: Text('More content coming soon...'),
-            ),
+          HomeHeaderSection(),
+          SizedBox(
+            height: 20.0,
           ),
+          CategoryFilterSection(),
+          Expanded(child: Center(child: Text('loading...'))),
         ],
       ),
+      bottomNavigationBar:
+          CustomBottomNavBar(),
     );
   }
 }
