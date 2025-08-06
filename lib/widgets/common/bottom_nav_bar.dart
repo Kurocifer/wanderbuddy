@@ -25,8 +25,8 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     {'icon': Icons.home_outlined, 'label': 'Home'},
     {'icon': Icons.image_outlined, 'label': 'Gallery'},
     {'icon': Icons.location_on_outlined, 'label': 'Map'},
-    {'icon': Icons.chat_outlined, 'label': 'Chat'},
-    {'icon': Icons.person_outline, 'label': 'You'},
+    {'icon': Icons.chat_bubble_outline, 'label': 'Chat'},
+    {'icon': Icons.person_outlined, 'label': 'You'},
   ];
 
   @override
@@ -39,6 +39,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           top: AppDimens.navBarTopPadding,
           left: AppDimens.navBarHorizontalPadding,
           right: AppDimens.navBarHorizontalPadding,
+          bottom: AppDimens.navBarTopPadding
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

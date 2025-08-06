@@ -29,8 +29,8 @@ class AppDimens {
 
   // --- Navigation Bar Specific Dimensions ---
   static const double navBarHeight = 85.0;
-  static const double navBarContentHeight = 40.0; // Height of the inner content (pill)
-  static const double navBarContentWidth = 327.0; // Width of the inner content container
+  static const double navBarContentHeight = 42.0; // Height of the inner content (pill)
+  static const double navBarContentWidth = 99.0; // Width of the inner content container
   static const double navBarTopPadding = 23.0; // Spacing from top of nav bar to content
   static const double navBarHorizontalPadding = 24.0; // Spacing from sides of nav bar to content
   static const double navBarItemGap = 30.0; // Gap between nav items

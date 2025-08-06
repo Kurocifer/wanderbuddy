@@ -47,7 +47,6 @@ class PinCard extends StatelessWidget {
             ),
           ),
 
-          // Gradient Overlay for Text Readability
           Positioned.fill(
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -64,7 +63,6 @@ class PinCard extends StatelessWidget {
             ),
           ),
 
-          // Top-Left: Star and Likes Count Pill
           Positioned(
             top: AppDimens.paddingSmall, // 8px
             left: AppDimens.paddingSmall, // 8px
@@ -74,8 +72,8 @@ class PinCard extends StatelessWidget {
                 vertical: AppDimens.paddingSmall / 2, // 4px
               ),
               decoration: BoxDecoration(
-                color: AppColors.black.withOpacity(0.4), // Semi-transparent black
-                borderRadius: BorderRadius.circular(AppDimens.borderRadiusExtraLarge), // Very rounded pill
+                color: AppColors.black.withOpacity(0.4),
+                borderRadius: BorderRadius.circular(AppDimens.borderRadiusExtraLarge),
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -85,7 +83,7 @@ class PinCard extends StatelessWidget {
                     size: AppDimens.iconSizeSmall, // 18px
                     color: AppColors.orange,
                   ),
-                  const SizedBox(width: 4.0), // Inferred small gap
+                  const SizedBox(width: 4.0),
                   Text(
                     pin.likes,
                     style: AppStyles.caption.copyWith(color: AppColors.white),
@@ -95,18 +93,16 @@ class PinCard extends StatelessWidget {
             ),
           ),
 
-          // Top-Right: Location Pin Icon (standalone)
           Positioned(
             top: AppDimens.paddingSmall, // 8px
             right: AppDimens.paddingSmall, // 8px
             child: Icon(
-              Icons.location_on, // Corrected icon to location pin
+              Icons.location_on,
               size: AppDimens.iconSizeMedium, // 24px
               color: AppColors.white,
             ),
           ),
 
-          // Content at the Bottom (Title and Location Text)
           Positioned(
             bottom: AppDimens.paddingSmall, // 8px
             left: AppDimens.paddingSmall, // 8px
@@ -123,12 +119,12 @@ class PinCard extends StatelessWidget {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
-                const SizedBox(height: 4.0), // Inferred small vertical spacing
+                const SizedBox(height: 4.0),
 
                 Row(
                   children: [
                     Icon(
-                      Icons.location_on, // Location icon for bottom text
+                      Icons.location_on,
                       size: AppDimens.iconSizeSmall, // 18px
                       color: AppColors.white,
                     ),
@@ -147,7 +143,6 @@ class PinCard extends StatelessWidget {
             ),
           ),
 
-          // Price (Bottom Right)
           Positioned(
             bottom: AppDimens.paddingSmall, // 8px
             right: AppDimens.paddingSmall, // 8px
