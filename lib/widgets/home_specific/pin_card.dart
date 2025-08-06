@@ -13,11 +13,11 @@ class PinCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 210.0, // As per your provided dimension
-      height: 154.0, // As per your provided dimension
+      width: 210.0,
+      height: 154.0,
       decoration: BoxDecoration(
         color: AppColors.white,
-        borderRadius: BorderRadius.circular(AppDimens.borderRadiusLarge), // 12px radius
+        borderRadius: BorderRadius.circular(AppDimens.borderRadiusLarge),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.05),
@@ -31,7 +31,7 @@ class PinCard extends StatelessWidget {
         children: [
           // Background Image
           Positioned.fill(
-            child: Image.asset( // Corrected to Image.asset for local files
+            child: Image.asset(
               pin.imageUrl,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) => Container(
@@ -81,9 +81,9 @@ class PinCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
-                    Icons.star,
+                    Icons.star_half,
                     size: AppDimens.iconSizeSmall, // 18px
-                    color: AppColors.white,
+                    color: AppColors.orange,
                   ),
                   const SizedBox(width: 4.0), // Inferred small gap
                   Text(

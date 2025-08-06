@@ -16,6 +16,7 @@ class AppDimens {
   static const double borderRadiusLarge = 12.0;
   static const double borderRadiusExtraLarge = 20.0; // For search bar, chips etc.
   static const double borderRadiusCircular = 100.0; // For profile pictures
+  static const double floatingActionButtonRaduis = 42.0;
 
   // --- Icon Sizes ---
   static const double iconSizeSmall = 18.0;

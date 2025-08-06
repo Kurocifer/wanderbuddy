@@ -1,3 +1,5 @@
+// lib/widgets/home_specific/shared_item_card.dart
+
 import 'package:flutter/material.dart';
 import 'package:wanderbuddy/models/pin_model.dart';
 import 'package:wanderbuddy/utils/app_colors.dart';
@@ -76,24 +78,32 @@ class SharedItemCard extends StatelessWidget {
             ),
           ),
 
-          // Main Image (FAB removed from here)
-          SizedBox(
-            width: double.infinity,
-            height: 200.0,
-            child: Image.asset(
-              pin.imageUrl,
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) => Container(
-                color: AppColors.blueNormal,
-                child: Center(
-                  child: Icon(
-                    Icons.broken_image,
-                    color: AppColors.secondaryText,
-                    size: AppDimens.iconSizeLarge,
+          // Main Image with FAB Overlay and 10px border radius
+          Stack(
+            children: [
+              SizedBox(
+                width: double.infinity,
+                height: 200.0,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image.asset(
+                    pin.imageUrl,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => Container(
+                      color: AppColors.blueNormal,
+                      child: Center(
+                        child: Icon(
+                          Icons.broken_image,
+                          color: AppColors.secondaryText,
+                          size: AppDimens.iconSizeLarge,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+              // Floating Action Button (FAB) - still handled by Scaffold
+            ],
           ),
 
           // Title, Likes, Location, Price
@@ -116,9 +126,9 @@ class SharedItemCard extends StatelessWidget {
                     Row(
                       children: [
                         Icon(
-                          Icons.star,
+                          Icons.star_half, // Retained your change to star_half
                           size: AppDimens.iconSizeSmall,
-                          color: AppColors.yellow,
+                          color: AppColors.orange, // Reverted to AppColors.yellow
                         ),
                         const SizedBox(width: 4.0),
                         Text(
@@ -145,7 +155,7 @@ class SharedItemCard extends StatelessWidget {
                         vertical: AppDimens.paddingSmall / 2,
                       ),
                       decoration: BoxDecoration(
-                        color: AppColors.tealNormal,
+                        color: AppColors.orange,
                         borderRadius: BorderRadius.circular(AppDimens.borderRadiusSmall),
                       ),
                       child: Text(

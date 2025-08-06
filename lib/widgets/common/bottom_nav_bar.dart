@@ -4,29 +4,35 @@ import 'package:wanderbuddy/utils/app_dimensions.dart';
 import 'package:wanderbuddy/utils/app_styles.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
-  const CustomBottomNavBar({super.key});
+  final int selectedIndex;
+  final Function(int) onItemSelected;
+
+  const CustomBottomNavBar({
+    super.key,
+    required this.selectedIndex,
+    required this.onItemSelected,
+  });
 
   @override
   State<CustomBottomNavBar> createState() => _CustomBottomNavBarState();
 }
 
 class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
-  int _selectedIndex = 0; // 0 for Home, as per requirement
+
 
   // List of navigation bar items
   final List<Map<String, dynamic>> _navItems = [
-    {'icon': Icons.home, 'label': 'Home'},
-    {'icon': Icons.image, 'label': 'Gallery'},
-    {'icon': Icons.location_on, 'label': 'Map'},
-    {'icon': Icons.chat, 'label': 'Chat'},
-    {'icon': Icons.person, 'label': 'You'},
+    {'icon': Icons.home_outlined, 'label': 'Home'},
+    {'icon': Icons.image_outlined, 'label': 'Gallery'},
+    {'icon': Icons.location_on_outlined, 'label': 'Map'},
+    {'icon': Icons.chat_outlined, 'label': 'Chat'},
+    {'icon': Icons.person_outline, 'label': 'You'},
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: AppDimens.navBarHeight,
-      // Using a light background color for the nav bar itself, inferred from design
       color: AppColors.blueLightBackground,
       child: Padding(
         padding: EdgeInsets.only(
@@ -35,19 +41,15 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           right: AppDimens.navBarHorizontalPadding,
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Distribute items evenly
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: _navItems.asMap().entries.map((entry) {
             int index = entry.key;
             Map<String, dynamic> item = entry.value;
-            bool isSelected = index == _selectedIndex;
+            bool isSelected = index == widget.selectedIndex;
 
             return GestureDetector(
               onTap: () {
-                // For a static page, we just update the selected index visually.
-                // No actual navigation logic is needed.
-                setState(() {
-                  _selectedIndex = index;
-                });
+                widget.onItemSelected(index);
               },
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 200),
@@ -55,7 +57,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                 height: AppDimens.navBarContentHeight,
                 width: isSelected
                     ? AppDimens.navBarSelectedPillWidth
-                    : AppDimens.iconSizeMedium + (AppDimens.navBarItemHorizontalPadding * 2), // Width for unselected icon only
+                    : AppDimens.iconSizeMedium + (AppDimens.navBarItemHorizontalPadding * 2),
                 decoration: BoxDecoration(
                   color: isSelected ? AppColors.tealNormal : Colors.transparent,
                   borderRadius: BorderRadius.circular(AppDimens.navBarSelectedPillRadius),
@@ -65,17 +67,17 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                         vertical: AppDimens.navBarItemVerticalPadding,
                         horizontal: AppDimens.navBarItemHorizontalPadding,
                       )
-                    : EdgeInsets.zero, // No padding for unselected icon-only state
+                    : EdgeInsets.zero,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center, // Center content within the pill
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
                       item['icon'],
                       size: AppDimens.iconSizeMedium,
-                      color: isSelected ? AppColors.white : AppColors.tealNormal,
+                      color: isSelected ? AppColors.white : Colors.grey,
                     ),
                     if (isSelected) ...[
-                      SizedBox(width: AppDimens.navBarItemIconTextGap), // Gap between icon and text
+                      SizedBox(width: AppDimens.navBarItemIconTextGap),
                       Text(
                         item['label'],
                         style: AppStyles.navBarSelectedLabel,
