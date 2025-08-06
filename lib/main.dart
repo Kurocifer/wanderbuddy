@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pixel Perfect App',
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Default theme color, will be customized later
+        primarySwatch: Colors.blue, // Default theme color
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const HomeScreen(),
