@@ -1,7 +1,7 @@
 class AppDimens {
   // --- Padding & Margins ---
   static const double paddingSmall = 8.0;
-  static const double paddingMedium = 16.0;
+  static const double paddingMedium = 14.0;
   static const double paddingLarge = 24.0;
   static const double paddingExtraLarge = 32.0;
 
@@ -24,7 +24,7 @@ class AppDimens {
 
   // --- Component Specific Dimensions ---
   static const double searchBarHeight = 50.0; // Placeholder
-  static const double profilePictureSize = 40.0; // Placeholder
+  static const double profilePictureSize = 38.0; // Placeholder
 
   // --- Navigation Bar Specific Dimensions ---
   static const double navBarHeight = 85.0;

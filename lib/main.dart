@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:wanderbuddy/widgets/home_specific/home_header_section.dart';
 
-// home screen place holder.
+// Placeholder for our home screen, will be defined later
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Text('Loading Home Screen...'),
+      body: Column( // Use a Column to stack the header and future content
+        children: [
+          HomeHeaderSection(), // Our new header section
+          // Placeholder for other content that will go below the header
+          Expanded(
+            child: Center(
+              child: Text('More content coming soon...'),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -24,9 +33,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Pixel Perfect App',
+      title: 'WonderBuddy', // Updated app title
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Default theme color
+        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const HomeScreen(),

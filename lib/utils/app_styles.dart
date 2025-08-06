@@ -10,7 +10,7 @@ class AppStyles {
   );
 
   static const TextStyle headline2 = TextStyle(
-    fontSize: 24.0,
+    fontSize: 16.0,
     fontWeight: FontWeight.bold,
     color: AppColors.primaryText,
   );
@@ -53,6 +53,12 @@ class AppStyles {
     fontSize: 14.0, // Inferred from padding and height
     fontWeight: FontWeight.w600, // Semi-bold
     color: AppColors.white,
+  );
+
+  static const TextStyle searchPlaceholder = TextStyle(
+    fontSize: 16.0,
+    fontWeight: FontWeight.normal,
+    color: AppColors.secondaryText,
   );
 
   static const Color navBarUnselectedIconColor =
