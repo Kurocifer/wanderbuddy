@@ -11,7 +11,7 @@ class AppDimens {
   static const double marginExtraLarge = 32.0;
 
   // --- Border Radii ---
-  static const double borderRadiusSmall = 4.0;
+  static const double borderRadiusSmall = 14.0;
   static const double borderRadiusMedium = 8.0;
   static const double borderRadiusLarge = 12.0;
   static const double borderRadiusExtraLarge = 20.0; // For search bar, chips etc.

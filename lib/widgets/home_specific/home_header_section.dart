@@ -1,5 +1,3 @@
-// lib/widgets/home_specific/home_header_section.dart
-
 import 'package:flutter/material.dart';
 import 'package:wanderbuddy/data/mock_data.dart';
 import 'package:wanderbuddy/utils/app_colors.dart';

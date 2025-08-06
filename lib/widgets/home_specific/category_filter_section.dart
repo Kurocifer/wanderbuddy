@@ -14,21 +14,21 @@ class CategoryFilterSection extends StatelessWidget {
       height: 40.0,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: AppDimens.paddingMedium), // 16px horizontal padding
+        padding: const EdgeInsets.symmetric(horizontal: AppDimens.paddingMedium),
         itemCount: MockData.categories.length,
         itemBuilder: (context, index) {
           final category = MockData.categories[index];
-          final isSelected = category.isSelected; // Using mock data's isSelected property
+          final isSelected = category.isSelected;
 
           return Padding(
-            padding: const EdgeInsets.only(right: AppDimens.paddingSmall), // 8px spacing between chips
+            padding: const EdgeInsets.only(right: AppDimens.paddingSmall),
             child: Container(
-              height: 40.0, // Chip height
+              height: 46.0,
               decoration: BoxDecoration(
-                color: isSelected ? AppColors.tealNormal : AppColors.blueNormal, // Teal for selected, light grey for unselected
+                color: isSelected ? AppColors.tealNormal : AppColors.blueNormal,
                 borderRadius: BorderRadius.circular(AppDimens.borderRadiusExtraLarge),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: AppDimens.paddingMedium), // 16px horizontal padding within chip
+              padding: const EdgeInsets.symmetric(horizontal: AppDimens.paddingMedium),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [

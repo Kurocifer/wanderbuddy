@@ -12,7 +12,7 @@ class MockData {
 
   // --- Dummy Image URLs for Pins ---
   // These are placeholder images. In a real app, you'd use your assets or network images.
-  static const String pancakes = '$_baseImageDirectory/panckas.jpg';
+  static const String pancakes = '$_baseImageDirectory/pancakes.jpg';
   static const String burgerAndFries = '$_baseImageDirectory/burger_and_fries.jpg';
   static const String concert = '$_baseImageDirectory/concert.jpg';
   static const String bowlOfNoodles = '$_baseImageDirectory/bowl_of_noodles.jpg';
