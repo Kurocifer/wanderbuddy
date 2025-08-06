@@ -1,5 +1,3 @@
-// lib/utils/app_styles.dart
-
 import 'package:flutter/material.dart';
 import 'package:wanderbuddy/utils/app_colors.dart';
 
@@ -50,20 +48,13 @@ class AppStyles {
     color: AppColors.secondaryText,
   );
 
-  // --- Specific UI Element Styles (placeholders, will refine) ---
-  static const TextStyle searchPlaceholder = TextStyle(
-    fontSize: 16.0,
-    fontWeight: FontWeight.normal,
-    color: AppColors.secondaryText,
-  );
-
+  // --- Navigation Bar Styles ---
   static const TextStyle navBarSelectedLabel = TextStyle(
-    fontSize: 12.0,
-    fontWeight: FontWeight.w600,
+    fontSize: 14.0, // Inferred from padding and height
+    fontWeight: FontWeight.w600, // Semi-bold
     color: AppColors.white,
   );
 
-  static const TextStyle navBarUnselectedIcon = TextStyle(
-    color: AppColors.secondaryText, // Or a specific grey from your palette
-  );
+  static const Color navBarUnselectedIconColor =
+      AppColors.blueDark; // From palette
 }
