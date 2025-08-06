@@ -11,7 +11,6 @@ class MockData {
   static const String noodlesGirlsProfilePic = '$_baseImageDirectory/noodles_girl_profile_picture.png';
 
   // --- Dummy Image URLs for Pins ---
-  // These are placeholder images. In a real app, you'd use your assets or network images.
   static const String pancakes = '$_baseImageDirectory/pancakes.jpg';
   static const String burgerAndFries = '$_baseImageDirectory/burger_and_fries.jpg';
   static const String concert = '$_baseImageDirectory/concert.jpg';
@@ -21,7 +20,7 @@ class MockData {
 
   // --- Mock Categories ---
   static List<Category> categories = [
-    Category(name: 'Food', icon: Icons.restaurant_outlined, isSelected: true), // Food is selected in the design
+    Category(name: 'Food', icon: Icons.restaurant_outlined, isSelected: true),
     Category(name: 'Music', icon: Icons.headphones_outlined),
     Category(name: 'Scenery', icon: Icons.landscape_outlined),
     Category(name: 'Travel', icon: Icons.flight_outlined),
@@ -96,6 +95,7 @@ class MockData {
       likes: '5k',
       location: 'Nylon, Bastos',
       price: '5,000frs',
+      sharedByProfileImageUrl: beachGuyProfilePic,
       sharedByName: 'Lorem dolor',
     ),
   ];
